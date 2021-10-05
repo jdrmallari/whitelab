@@ -14,17 +14,53 @@
         <!-- Handlebars -->
         <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b0e3d04ca1.js" crossorigin="anonymous"></script>
+
         <!--<script src="js/main.js"></script>-->
     </head>
     <body>
-        <header>
-            <nav class="navbar navbar-expand-lg">
-                <a href="#" class="active">Home</a>
-                <a href="https://jdrmallari.github.io/">About</a>
-                <a href="docs.html">Docs</a>
-                <a href="https://trello.com/b/eCtjpeDl/white-lab">In Progress</a>
-            </nav>
-            <a href="#" class="logo"><h1><strong>White Lab |_|><!-- ><(((°> --></strong></h1></a>
+        <header class="container-fluid pb-2">
+          <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand h1" href="#"><strong>White Lab |_|><!-- ><(((°> --></strong></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fas fa-bars fa-lg"></i>
+          </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a href="index.html" class="active nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="https://jdrmallari.github.io/" class="nav-link">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="docs.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Docs
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Software Development</a></li>
+                    <li><a class="dropdown-item" href="#">Data Science</a></li>
+                    <li><a class="dropdown-item" href="#">Chess</a></li>
+                    <li><a class="dropdown-item" href="#">Language</a></li>
+                    <li><a class="dropdown-item" href="#">History</a></li>
+                    <li><a class="dropdown-item" href="#">Science</a></li>
+                    <li><a class="dropdown-item" href="#">Design</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a href="https://trello.com/b/eCtjpeDl/white-lab" target="_blank" rel="noopener noreferrer" class="nav-link">In Progress</a>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-default btn-sm">
+                      <i class="fas fa-search fa-lg"></i>
+                  </button>
+              </li>
+              </ul>
+            </div>
+          </nav>
         </header>
         <div class="content">
 
@@ -64,7 +100,7 @@
                 </button>
             </div>
 
-            <div class="about">
+            <div id="about">
                 <h2>Purpose</h2>
                 <p>There are just so many things to learn!
                     <br>It can all get a bit overwhelming. 
@@ -78,5 +114,3 @@
         </footer>
     </body>
 </html>
-
-<script></script>

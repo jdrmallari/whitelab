@@ -5,75 +5,65 @@
         <title>White Lab</title>
         <!--Bootstrap 5-->
         <link type= "text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <!-- Handlebars -->
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/b0e3d04ca1.js" crossorigin="anonymous"></script>
 
         <link type="text/css" href="style.css" rel="stylesheet">
-        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="js/main.js"></script>
+
+        <script src="/js/main.js" type=module defer></script>
     </head>
     <body>
-        <header>
+        <header class="container-fluid">
             <nav class="navbar navbar-expand-lg">
-                <a href="index.html">Home</a>
-                <a href="https://jdrmallari.github.io/">About</a>
-                <a href="docs.html" class="active">Docs</a>
-                <a href="https://trello.com/b/eCtjpeDl/white-lab">Progress</a>
-            </nav>
-            <a href="index.html"><h1><strong>White Lab |_|><!-- ><(((°> --></strong></h1></a>
+                <a class="navbar-brand h1" href="#"><strong>White Lab |_|><!-- ><(((°> --></strong></a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <i class="fas fa-bars fa-lg"></i>
+              </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                      <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://jdrmallari.github.io/" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="active nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Docs
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                          <li><a class="dropdown-item" href="#">Software Development</a></li>
+                          <li><a class="dropdown-item" href="#">Data Science</a></li>
+                          <li><a class="dropdown-item" href="#">Chess</a></li>
+                          <li><a class="dropdown-item" href="#">Language</a></li>
+                          <li><a class="dropdown-item" href="#">History</a></li>
+                          <li><a class="dropdown-item" href="#">Science</a></li>
+                          <li><a class="dropdown-item" href="#">Design</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a href="https://trello.com/b/eCtjpeDl/white-lab" target="_blank" rel="noopener noreferrer" class="nav-link">In Progress</a>
+                    </li>
+                    <li class="nav-item">
+                      <button type="button" class="btn btn-default btn-sm">
+                          <i class="fas fa-search fa-lg"></i>
+                      </button>
+                  </li>
+                  </ul>
+                </div>
+              </nav>
         </header>
-        <div class="content">
+        <div id="docs-content">
+            <div id="target">
             <!-- <img src="pictures/under-construction.jpeg" class="nothing-to-see"> -->
-            <div class="row text-center">
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/monkey-chess.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post1</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/chemistry.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post2</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/ghost-of-cassiopeia.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post3</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/french-modern-maison.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post4</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/white-desert.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post5</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/gandalf.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post6</a></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/CPU.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post7</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/white-lab.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post8</a></div>
-                    </div>
-                </div>
-                <div class="col-xl-4 docs-post" style="background-image: url(pictures/statue.jpeg)">
-                    <div class="overlay">
-                        <div class="post-caption"><a href ="">Post9</a></div>
-                    </div>
-                </div>
             </div>
             <footer>
                 <p>Copyright©2021</p>
@@ -81,3 +71,19 @@
         </div>
     </body>
 </html>
+
+<!-- Templates -->
+
+<script id="post-grid-template" type="application/x-handlebars-template">
+    {{#grouped_each 3 post}}
+    <div class="row text-center">
+        {{#each this}}
+        <div class="col-xl-4 docs-post" style="background-image: url({{p_url}})" data-id={{id}}>
+            <div class="overlay">
+                <div class="post-caption"><a href ="/#!/docs.html/{{id}}">{{p_caption}}</a></div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+    {{/grouped_each}}
+</script>

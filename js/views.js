@@ -1,15 +1,36 @@
-export {listPostView};
+function applyTemplate(targetid, templateid, data) {
+    let target = document.getElementById(targetid);
 
-function listPostView(targetid, posts) {
+    let template = Handlebars.compile(
+                        document.getElementById(templateid).textContent
+    );
 
-    let content = document.getElementbyId(content);
+    Handlebars.registerHelper("prettifyDate", function(timestamp) {
+        return new Date(timestamp).toLocaleDateString();
+    });
 
-    let list = "<ul>"
-    for (let i = 0; i < posts.length; i++) {
-        list += "<li" + posts[i].name + "</li>";
-    }
+    Handlebars.registerHelper('grouped_each', function(every, context, options) {
+        var out = "", subcontext = [], i;
+        if (context && context.length > 0) {
+            for (i = 0; i < context.length; i++) {
+                if (i > 0 && i % every === 0) {
+                    out += options.fn(subcontext);
+                    subcontext = [];
+                }
+                subcontext.push(context[i]);
+            }
+            out += options.fn(subcontext);
+        }
+        return out;
+    });
 
-    list += "</ul>"
+    target.innerHTML = template(data);
+}
 
-    content.innerHTML = list;
+export function gridPostsView(targetid, post) {
+    return applyTemplate(targetid, 'post-grid-template', {"post": post});
+}
+
+export function singlePostView(targetid, post/*, user*/) {
+    return applyTemplate(targetid, 'post-template', {post: post});//, user: user});
 }
